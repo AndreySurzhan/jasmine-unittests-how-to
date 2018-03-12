@@ -4,7 +4,7 @@ describe('Unit tests for temperature conversion', () => {
     beforeAll(() => {
         console.log('beforeAll');
         this.celsius = 14;
-       this.fahrenheit = 57.2;
+        this.fahrenheit = 57.2;
     });
 
     beforeEach(() => {
@@ -25,7 +25,11 @@ describe('Unit tests for temperature conversion', () => {
             from: 'F'
         });
 
-        expect(value).toBe(this.celsius)
+        expect(value.to).toBe(this.celsius);
+        expect(value).toBeConverted({
+            from: this.fahrenheit,
+            to: this.celsius
+        });
     });
 
     it('Should convert Fahrenheit to Celsius', () => {
@@ -34,15 +38,24 @@ describe('Unit tests for temperature conversion', () => {
             from: 'C'
         });
 
-        expect(value).toBe(this.fahrenheit)
+        expect(value.to).toBe(this.fahrenheit);
+        expect(value).toBeConverted({
+            from: this.celsius,
+            to: this.fahrenheit
+        });
     });
 
     it('Should not convert if one to or from is not specified correctly', () => {
         let value = converter.temperature(this.fahrenheit, {
-            to: 'A',
-            from: 'C'
+            to: 'C',
+            from: 'TEST'
         });
 
-        expect(value).toBe(this.fahrenheit)
+        expect(value.from).toBe(this.fahrenheit);
+        expect(value.to).toBe(null);
+        expect(value).toBeConverted({
+            from: this.fahrenheit,
+            to: null
+        });
     })
 });
