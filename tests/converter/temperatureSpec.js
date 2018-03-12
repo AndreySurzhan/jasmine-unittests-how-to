@@ -1,51 +1,48 @@
-var _this = this;
-
 const converter = require('../../src/converter');
 
 describe('Unit tests for temperature conversion', () => {
     beforeAll(() => {
-        _this.celsius = 14;
-        _this.fahrenheit = 57.2;
+        console.log('beforeAll');
+        this.celsius = 14;
+       this.fahrenheit = 57.2;
     });
 
     beforeEach(() => {
-        console.log('Run test');
+        console.log('beforeEach');
     });
 
     afterAll(() => {
-        console.log('Spec is finished');
+        console.log('afterAll');
     });
 
     afterEach(() => {
-        console.log('Test finished');
+        console.log('afterEach');
     });
 
     it('Should convert Celsius to Fahrenheit', () => {
-        let value = converter.temperature(_this.fahrenheit, {
+        let value = converter.temperature(this.fahrenheit, {
             to: 'C',
             from: 'F'
         });
 
-        expect(value).toBe(_this.celsius);
+        expect(value).toBe(this.celsius)
     });
 
     it('Should convert Fahrenheit to Celsius', () => {
-        let value = converter.temperature(_this.celsius, {
+        let value = converter.temperature(this.celsius, {
             to: 'F',
             from: 'C'
         });
 
-        expect(value).toBe(_this.fahrenheit);
+        expect(value).toBe(this.fahrenheit)
     });
 
     it('Should not convert if one to or from is not specified correctly', () => {
-        let value = converter.temperature(_this.fahrenheit, {
+        let value = converter.temperature(this.fahrenheit, {
             to: 'A',
             from: 'C'
         });
 
-        expect(value).toBe(_this.fahrenheit);
-    });
+        expect(value).toBe(this.fahrenheit)
+    })
 });
-
-//# sourceMappingURL=temperatureSpec-compiled.js.map
