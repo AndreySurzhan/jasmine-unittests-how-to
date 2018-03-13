@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "location": "Louisville",
+        "temperature": {
+            "fahrenheit": 40
+        }
+    },
+    {
+        "id": 2,
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28
+        }
+    }
+]
