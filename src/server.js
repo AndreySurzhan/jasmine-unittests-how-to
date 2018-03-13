@@ -1,38 +1,41 @@
 const express = require('express');
 const app = express();
-const weatherController = ('./weatherController');
+const weatherController = require('./weatherController');
 const converter = require('./converter');
 
+app.use(express.json());
+
 app.get('/:id', function (req, res) {
-    const data = weatherController.get(req.params.id);
+    const data = weatherController.getById(req.params.id);
     res.send(data)
 });
 
-app.post('/:id', function (req, res) {
+app.post('/', function (req, res) {
     let data = req.body;
     let temperature = data.temperature;
     let converterValue = null;
 
     if (temperature.fahrenheit && !temperature.celsius) {
-        converterValue = converter.temperature(temperature, {
+        converterValue = converter.temperature(temperature.fahrenheit, {
             to: 'c',
             from: 'f'
         });
 
-        temperature.celsius = converterValue;
+        temperature.celsius = converterValue.to;
     }
 
     if (temperature.celsius && !temperature.fahrenheit) {
-        converterValue = converter.temperature(temperature, {
+        converterValue = converter.temperature(temperature.celsius, {
             to: 'f',
             from: 'c'
         });
 
-        temperature.fahrenheit = converterValue;
+        temperature.fahrenheit = converterValue.to;
     }
 
-    data = weatherController.insert(req.params.id, data);
-    res.send(data)
+    weatherController.insert(data).then(forecast => {
+        res.send(forecast)
+    });
 });
 
 app.listen(3000);

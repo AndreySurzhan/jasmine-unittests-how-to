@@ -12,5 +12,48 @@
         "temperature": {
             "celsius": -28
         }
+    },
+    {
+        "location": "Moscow",
+        "temperature": {
+            "fahrenheit": 56,
+            "celsius": {
+                "from": 56,
+                "to": 13.3
+            }
+        },
+        "id": 1520905133985
+    },
+    {
+        "location": "Moscow",
+        "temperature": {
+            "fahrenheit": 56,
+            "celsius": 13.3
+        },
+        "id": 1520905545749
+    },
+    {
+        "location": "Moscow",
+        "temperature": {
+            "fahrenheit": 56,
+            "celsius": 13.3
+        },
+        "id": 1520905634269
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1520905739493
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1520905805591
     }
 ]

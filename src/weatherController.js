@@ -1,4 +1,6 @@
-const fs = reuqire('fs');
+const fs = require('fs');
+const path = require('path');
+
 
 module.exports = {
     /**
@@ -9,7 +11,7 @@ module.exports = {
      *
      * @returns {Object}
      */
-    getById(id) {
+        getById(id) {
         const data = require('./data/weather');
 
         if (!data && !(data instanceof Array)) {
@@ -18,15 +20,16 @@ module.exports = {
             return data
         }
 
-        for (let forecast in data) {
-            if (forecast.id === id) {
-                return forecast
+        for (let i = 0; i < data.length; i++) {
+            console.log(data[i]);
+            if (data[i].id == id) {
+                return data[i]
             }
         }
 
         console.log(`Forecast with id "${id}" doesn't exist`);
 
-        return data
+        return null
     },
 
     /**
@@ -41,24 +44,26 @@ module.exports = {
      *
      * @returns {Object}
      */
-    insert(forecast) {
+        insert(forecast) {
         let filePath = `./data/weather.json`;
         let data = require(filePath);
 
         forecast.id = Date.now();
 
-        data.add(forecast);
+        data.push(forecast);
 
-        fs.writeFile(filePath, JSON.stringify(data), 'utf8', (err) => {
-            if (err) {
-                console.error(err);
+        return new Promise(function (resolve, reject) {
+            fs.writeFile(path.join(__dirname, filePath), JSON.stringify(data, null, 4), (err) => {
+                if (err) {
+                    console.error(err);
+                    reject(err);
 
-                return null
-            }
+                    return;
+                }
 
-            console.log(`Weather report has been successfully saved to "${filePath}"`);
-
-            return forecast
+                console.log(`Weather report has been successfully saved to "${filePath}"`);
+                resolve(forecast);
+            })
         })
     }
 };
