@@ -1,12 +1,14 @@
 const Jasmine = require('jasmine');
 const myReporter = require('./utils/myReporter');
+const SpecReporter = require('jasmine-spec-reporter');
 const config = require('./support/jasmine');
 const myMatchers = require('./utils/myMatchers');
 
 const jasmine = new Jasmine();
 
 jasmine.loadConfig(config);
-jasmine.addReporter(myReporter);
+jasmine.clearReporters();
+jasmine.addReporter(new SpecReporter());
 
 beforeEach(function () {
     jasmine.addMatchers(myMatchers);

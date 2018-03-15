@@ -11,6 +11,7 @@
     "license": "ISC",
     "devDependencies": {
         "jasmine": "^3.1.0",
+        "jasmine-spec-reporter": "^2.7.0",
         "request": "^2.85.0"
     },
     "dependencies": {

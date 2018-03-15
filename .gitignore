@@ -3,3 +3,4 @@ node_modules/
 *compiled.js
 *.map
 package-lock.json
+.DS_Store

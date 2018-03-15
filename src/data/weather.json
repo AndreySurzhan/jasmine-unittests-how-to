@@ -1,10 +1,463 @@
 [
     {
+        "id": 1,
+        "location": "Louisville",
+        "temperature": {
+            "fahrenheit": 40
+        }
+    },
+    {
+        "id": 2,
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28
+        }
+    },
+    {
+        "location": "Moscow",
+        "temperature": {
+            "fahrenheit": 56,
+            "celsius": {
+                "from": 56,
+                "to": 13.3
+            }
+        },
+        "id": 1520905133985
+    },
+    {
+        "location": "Moscow",
+        "temperature": {
+            "fahrenheit": 56,
+            "celsius": 13.3
+        },
+        "id": 1520905545749
+    },
+    {
+        "location": "Moscow",
+        "temperature": {
+            "fahrenheit": 56,
+            "celsius": 13.3
+        },
+        "id": 1520905634269
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1520905739493
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1520905805591
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1521075006188
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521075554429
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521075672216
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1521075691505
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1521075720534
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": -28,
+            "fahrenheit": -18.4
+        },
+        "id": 1521075823718
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521075840931
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521075861150
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521075863187
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521076049495
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521076055696
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 1,
+            "fahrenheit": 33.8
+        },
+        "id": 1521076133792
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521076142652
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521076245998
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521076303432
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521076329647
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0
+        },
+        "id": 1521076339804
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076399230
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076408454
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076459767
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076507482
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076563768
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076692805
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076717859
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076818181
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076845973
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076959120
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076978120
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521076989318
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077036046
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077085372
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077119813
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077174286
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077205125
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077260029
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077290003
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077437589
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077451438
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077465982
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077499114
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077650451
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077682483
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521077762084
+    },
+    {
         "location": "Saratov",
         "temperature": {
             "celsius": 0,
             "fahrenheit": 32
         },
         "id": 1521077782019
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521078004961
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521078261787
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521078276563
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521078337986
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521078346790
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521078416116
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521078826995
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521079134245
     }
 ]
