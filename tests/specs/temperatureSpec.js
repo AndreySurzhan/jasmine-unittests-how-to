@@ -3,8 +3,8 @@ const converter = require('../../src/converter');
 describe('Unit tests for temperature conversion', () => {
     beforeAll(() => {
         console.log('beforeAll');
-        this.celsius = 14;
-        this.fahrenheit = 57.2;
+        this.celsius = 0;
+        this.fahrenheit = 32;
     });
 
     beforeEach(() => {
