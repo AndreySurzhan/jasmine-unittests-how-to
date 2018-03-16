@@ -459,5 +459,61 @@
             "fahrenheit": 32
         },
         "id": 1521079134245
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521162936751
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521163063585
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521163097913
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521163134087
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521163177869
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521163214674
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1521163301229
     }
 ]

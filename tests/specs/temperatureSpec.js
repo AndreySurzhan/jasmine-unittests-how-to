@@ -1,10 +1,12 @@
-const converter = require('../../src/converter');
+const converter = require('../../src/converterUtility');
 
-describe('Unit tests for temperature conversion', () => {
+describe('Unit tests for convertTemperature function', () => {
     beforeAll(() => {
         console.log('beforeAll');
-        this.celsius = 0;
-        this.fahrenheit = 32;
+        this.expected = {
+            celsius: 0,
+            fahrenheit: 32
+        }
     });
 
     beforeEach(() => {
@@ -19,43 +21,35 @@ describe('Unit tests for temperature conversion', () => {
         console.log('afterEach');
     });
 
-    it('Should convert Celsius to Fahrenheit', () => {
-        let value = converter.temperature(this.fahrenheit, {
-            to: 'C',
-            from: 'F'
+    it('Should convertTemperature converts Celsius to Fahrenheit', () => {
+        let value = converter.convertTemperature({
+            celsius: 0
         });
 
-        expect(value.to).toBe(this.celsius);
-        expect(value).toBeConverted({
-            from: this.fahrenheit,
-            to: this.celsius
-        });
+        expect(value).toBeTruthy();
+        expect(value).toBeConverted(this.expected);
     });
 
-    it('Should convert Fahrenheit to Celsius', () => {
-        let value = converter.temperature(this.celsius, {
-            to: 'F',
-            from: 'C'
+    it('Should convertTemperature converts Fahrenheit to Celsius', () => {
+        let value = converter.convertTemperature({
+            fahrenheit: 32
         });
 
-        expect(value.to).toBe(this.fahrenheit);
-        expect(value).toBeConverted({
-            from: this.celsius,
-            to: this.fahrenheit
-        });
+        expect(value).toBeTruthy();
+        expect(value).toBeConverted(this.expected);
+    });
+});
+
+describe('Unit tests for converer functions', () => {
+    it('Should toFahrenheit converts Celsius to Fahrenheit', () => {
+        let value = converter.toFahrenheit(0);
+
+        expect(value).toBe(this.expected.fahrenheit)
     });
 
-    it('Should not convert if one to or from is not specified correctly', () => {
-        let value = converter.temperature(this.fahrenheit, {
-            to: 'C',
-            from: 'TEST'
-        });
+    it('Should toCelsius converts Fahrenheit to Celsius', () => {
+        let value = converter.toCelsius(32);
 
-        expect(value.from).toBe(this.fahrenheit);
-        expect(value.to).toBe(null);
-        expect(value).toBeConverted({
-            from: this.fahrenheit,
-            to: null
-        });
-    })
+        expect(value).toBe(this.expected.celsius);
+    });
 });

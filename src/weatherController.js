@@ -11,7 +11,7 @@ module.exports = {
      *
      * @returns {Object}
      */
-        getById(id) {
+    getById(id) {
         const data = require('./data/weather');
 
         if (!data && !(data instanceof Array)) {
@@ -21,7 +21,6 @@ module.exports = {
         }
 
         for (let i = 0; i < data.length; i++) {
-            console.log(data[i]);
             if (data[i].id == id) {
                 return data[i]
             }
@@ -42,9 +41,9 @@ module.exports = {
      * @param {string} forecast.location
      * @param {number} forecast.temperature
      *
-     * @returns {Object}
+     * @returns {Object} forecast
      */
-        insert(forecast) {
+    insert(forecast) {
         let filePath = `./data/weather.json`;
         let data = require(filePath);
 
@@ -52,7 +51,7 @@ module.exports = {
 
         data.push(forecast);
 
-        return new Promise(function (resolve, reject) {
+        return new Promise(function(resolve, reject) {
             fs.writeFile(path.join(__dirname, filePath), JSON.stringify(data, null, 4), (err) => {
                 if (err) {
                     console.error(err);

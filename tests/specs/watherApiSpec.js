@@ -1,5 +1,4 @@
 const request = require('request');
-const converter = require('../../src/converter');
 
 describe('REST API tests weather service', () => {
     beforeAll(() => {
