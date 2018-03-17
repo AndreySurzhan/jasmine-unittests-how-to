@@ -40,6 +40,38 @@ describe('Unit tests for convertTemperature function', () => {
     });
 });
 
+describe('Unit test converterTemperature with spies', () => {
+    it('Should toFahrenheit be called while convertTemperature is converting Celsius to Fahrenheit', () => {
+        spyOn(converter, 'toFahrenheit')
+        spyOn(converter, 'toCelsius')
+
+        let value = converter.convertTemperature({
+            celsius: 0
+        });
+
+        expect(converter.toFahrenheit).toHaveBeenCalled();
+        expect(converter.toFahrenheit).toHaveBeenCalledTimes(1)
+        expect(converter.toCelsius).not.toHaveBeenCalled();
+
+    });
+
+    it('Should toCelsius be mocked while beconvertTemperature is convertis Fahrenheit to Celsius', () => {
+        spyOn(converter, 'toCelsius').and.returnValue(10000)
+
+        let value = converter.convertTemperature({
+            fahrenheit: 32
+        });
+
+        expect(converter.toCelsius).toHaveBeenCalled();
+        expect(converter.toCelsius).toHaveBeenCalledTimes(1)
+        expect(converter.toCelsius).toHaveBeenCalledWith(32, 1)
+        expect(value).toBeConverted({
+            fahrenheit: 32,
+            celsius: 10000
+        });
+    });
+});
+
 describe('Unit tests for converer functions', () => {
     it('Should toFahrenheit converts Celsius to Fahrenheit', () => {
         let value = converter.toFahrenheit(0);

@@ -40,6 +40,7 @@ describe('REST API tests weather service', () => {
     it('Should get existing record when calling weather GET endpoint', (done) => {
         const resource = `/weather/${this.id}`;
 
+
         request.get(`${this.baseUrl}${resource}`, {
             json: true
         }, (error, response, body) => {

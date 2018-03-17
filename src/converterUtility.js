@@ -13,11 +13,11 @@ module.exports = {
      * @returns {Object} temperature
      */
     convertTemperature(temperature, precision = 1) {
-        if (temperature.hasOwnProperty('fahrenheit')) {
+        if (temperature.hasOwnProperty('fahrenheit') && !temperature.hasOwnProperty('celsius')) {
             temperature.celsius = this.toCelsius(temperature.fahrenheit, precision)
         }
 
-        if (temperature.hasOwnProperty('celsius')) {
+        if (temperature.hasOwnProperty('celsius') && !temperature.hasOwnProperty('fahrenheit')) {
             temperature.fahrenheit = this.toFahrenheit(temperature.celsius, precision)
         }
 
