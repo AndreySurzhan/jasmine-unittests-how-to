@@ -1,3 +1,4 @@
+const server = require('../src/server')
 const Jasmine = require('jasmine');
 const myReporter = require('./utils/myReporter');
 const SpecReporter = require('jasmine-spec-reporter');
@@ -10,16 +11,21 @@ jasmine.loadConfig(config);
 jasmine.clearReporters();
 jasmine.addReporter(new SpecReporter());
 
-beforeEach(function () {
+beforeEach(function() {
     jasmine.addMatchers(myMatchers);
 });
 
-jasmine.onComplete( function( passed ) {
-    if( passed ) {
+jasmine.onComplete(function(passed) {
+    if (passed) {
         console.log('Clean up data');
+    } else {
+        process.exit(1);
     }
 
-    console.log('Write report somewhere');
+    server.close(function() {
+        console.log("Closed out remaining connections.");
+        process.exit()
+    });
 });
 
 jasmine.execute();

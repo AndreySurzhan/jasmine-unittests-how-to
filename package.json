@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "project for jslou-jasmine-unittests presentation",
     "main": "./src/server.js",
+    "pre-commit": ["test"],
     "scripts": {
         "start": "node src/server.js",
         "test": "node tests/jasmine.js"
@@ -12,6 +13,7 @@
     "devDependencies": {
         "jasmine": "^3.1.0",
         "jasmine-spec-reporter": "^2.7.0",
+        "pre-commit": "^1.2.2",
         "request": "^2.85.0"
     },
     "dependencies": {

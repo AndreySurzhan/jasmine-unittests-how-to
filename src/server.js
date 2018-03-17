@@ -19,4 +19,6 @@ app.post('/weather', function(req, res) {
     });
 });
 
-app.listen(3000);
+let server = app.listen(3000);
+
+module.exports = server
