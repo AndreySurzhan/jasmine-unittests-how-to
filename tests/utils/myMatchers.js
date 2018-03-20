@@ -11,8 +11,6 @@ module.exports = {
                         result.pass = true;
                     } else {
                         result.pass = false;
-
-                        return result;
                     }
                 }
 

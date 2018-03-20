@@ -23,7 +23,7 @@ jasmine.onComplete(function(passed) {
     }
 
     server.close(function() {
-        console.log("Closed out remaining connections.");
+        console.log("++++++++++++++++ Closed out remaining connections +++++++++++++++++");
         process.exit()
     });
 });

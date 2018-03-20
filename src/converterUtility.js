@@ -24,7 +24,6 @@ module.exports = {
         return temperature;
     },
 
-
     /**
      * @function
      * @name toCelsius
