@@ -22,7 +22,7 @@ describe('Unitests for converterUtility', () => {
     });
 
     describe('Unit tests for convertTemperature function', () => {
-        it('Should convertTemperature converts Celsius to Fahrenheit', () => {
+        it('Should convert Celsius to Fahrenheit using convertTemperature', () => {
             let value = converter.convertTemperature({
                 celsius: 0
             });
@@ -31,7 +31,7 @@ describe('Unitests for converterUtility', () => {
             expect(value).toBeConverted(this.expected);
         });
 
-        it('Should convertTemperature converts Fahrenheit to Celsius', () => {
+        it('Should convert Fahrenheit to Celsius using convertTemperature', () => {
             let value = converter.convertTemperature({
                 fahrenheit: 32
             });

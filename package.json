@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "project for jslou-jasmine-unittests presentation",
     "main": "./src/server.js",
-    "pre-commit": ["test"],
+    "pre-commit": [
+        "test"
+    ],
     "scripts": {
         "start": "node src/server.js",
         "test": "node tests/jasmine.js"
