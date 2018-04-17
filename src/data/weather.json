@@ -125,5 +125,21 @@
             "fahrenheit": 32
         },
         "id": 1523196738802
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1523196775351
+    },
+    {
+        "location": "Saratov",
+        "temperature": {
+            "celsius": 0,
+            "fahrenheit": 32
+        },
+        "id": 1523997192720
     }
 ]
